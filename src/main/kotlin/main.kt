@@ -1,6 +1,6 @@
 fun main() {
-    val value = 200_000
-    val paymentSystem = "Maestro"
+    val value = 1000
+    val paymentSystem = "VK Pay"
     println(calculationCommission(value, paymentSystem, 75000))
 }
 
@@ -28,6 +28,6 @@ fun calculationCommission(paymentValue: Int, paymentSystem: String = "VK Pay", p
     } else if (paymentSystem == "Visa" || paymentSystem == "Мир") {
         transferFee =
             if ((paymentValue * 0.0075).toInt() <= minTransferFee) minTransferFee else (paymentValue * 0.0075).toInt()
-    } else transferFee
+    }
     return transferFee
 }

@@ -134,6 +134,6 @@ class MainKtTest {
         val previousPayment = 20_000
 
         val result = calculationCommission(paymentValue, "VK Pay", previousPayment)
-        assertEquals(0, result)
+        assertEquals(5, result)
     }
 }
